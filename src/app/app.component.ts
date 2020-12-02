@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  links : String[] = ["q1","q2","q3","q4"];
+  links : String[] = ["/q1","/q2","/q3","/q4"];
 
 }
