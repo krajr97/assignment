@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-group" style="margin-left: 1rem;">
+      <label for="phone">
+        <h4>Enter your phone number</h4>
+      </label>
+      <div class="input-group">
+        <input type="input" class="form-control" id="phone" name="phone" placeholder="Enter Phone number"
+          [(ngModel)]="element">
+        <div class="input-group-btn">
+          <button style="margin-left: 1rem;" class="btn btn-primary" type="button" (click)="addReq()">
+            ADD ANOTHER NUMBER
+          </button>
+        </div>
+      </div>
+      <div class="input-group" *ngFor="let a of Array" style="margin-top: 1rem;">
+        <input type="text" value="{{a}}" class="form-control" #name readonly>
+        <div class="input-group-btn">
+          <button style="margin-left: 1rem;" class="btn btn-warning" (click)="removeReq(name.value)" type="button">
+            DELETE
+          </button>
+        </div>
+      </div>
+      <br>
+      <button type="submit" (click)="onSubmit()" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</div>

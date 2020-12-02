@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Find the missing number of series</h1>
+  <hr />
+
+  <h2>2,3,10,15,26,35,50,63,?</h2>
+
+  <div class="alert alert-warning" role="alert">
+    Enter any index number to get the number of the series at entered index.
+    Index starts with 1.
+  </div>
+
+  <div>
+    <form (ngSubmit)="getNumber(form)" #form="ngForm">
+      <div class="form-group row">
+        <label for="number" class="col-md-4 col-form-label text-md-right">Enter Index number</label>
+        <div class="col-md-3">
+          <input
+            type="number"
+            id="number"
+            class="form-control"
+            name="number"
+            required
+            ngModel
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <h2 *ngIf="show">Number at index position {{index}} is {{result}}</h2>
+</div>
